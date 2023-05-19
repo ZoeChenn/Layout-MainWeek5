@@ -1,10 +1,53 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首頁</title>
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <!-- CSS only -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="./index.html" class="navbar-brand">
+          <img src="./assets/images/logo.svg" alt="CodeHome-logo" height="42" class="mb-2 mt-2">
+        </a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">首頁</a>
+            </li>
+            <li class="nav-item ms-5">
+              <a href="./classes.html" class="nav-link">課程介紹</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <span class="material-icons align-middle ms-5">
+                  account_circle
+                  </span>
+                登入</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row row-cols-2">
+      <div class="col border-bottom border-2 border-primary"></div>
+      <div class="col border-bottom border-2 border-secondary"></div>
+    </div>
+  </header>
+
+  
 <section class="banner">
   <div class="container">
     <div class="row justify-content-center">
@@ -417,3 +460,48 @@ current: index
     </div>
   </div>
 </section>
+
+  <footer class="footer container-fluid text-center p-3 p-md-4">
+    Coding Home © 2022 All Rights Reserved
+  </footer>
+
+  <!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form>
+          <h5 class="modal-title text-center" id="loginModalLabel">登入</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div>
+            <label for="inputEmail" class="form-label">信箱</label>
+            <input type="email" class="form-control text-white" id="inputEmail" placeholder="請輸入信箱">
+          </div>
+          <div>
+            <label for="inputPassword" class="form-label">密碼</label>
+            <input type="password" class="form-control text-white" id="inputPassword" placeholder="請輸入密碼">
+          </div>
+          <button type="submit" class="btn btn-gradient rounded-8 w-100">登入</button>
+          <div class="login-divider">其他登入方式</div>
+          <a href="#" class="position-relative d-flex align-items-center rounded-4 px-4 py-2 mb-4">
+            <img src="./assets/images/icon_fb.svg" alt="Facebook 登入" height="24" >
+            <span class="position-absolute start-50 translate-middle-x">Facebook 登入</span>
+          </a>
+          <a href="#" class="position-relative d-flex align-items-center rounded-4 px-4 py-2">
+            <img src="./assets/images/icon_google.svg" alt="Google 登入" height="24" >
+            <span class="position-absolute start-50 translate-middle-x">Google 登入</span>
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
